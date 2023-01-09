@@ -2,7 +2,7 @@
 
 A small journey into my Tech World filled with bizarre experiences. One such instance that comes to mind is when I had to make some enhancements to an existing UI that was written earlier. The older Tech Stack was Django-based SSR (using View Templating) with jQuery in the browser. However, the enhancement planned was based on React, as the library, we will be composing on top of was built in React and we were already in the middle of a Tech Stack migration for the front-end. On the other hand, the whole UI system of the existing one was quite heavy and would require significant *person-hour* to completely migrate to React. So we made a decision that we will build all enhancements in React while keeping the older UI intact and just extensible.
 
-*TLDR;* Experienced React developers can skip directly to [Let's Get Started](http://example.com) chapter.
+*TLDR;* Experienced React developers can skip directly to [Let's Get Started](https://theprodev.hashnode.dev/rendering-react-component-in-django-jquery-ui?showSharer=true#heading-lets-get-started) chapter.
 
 ## How React works in Browser
 
