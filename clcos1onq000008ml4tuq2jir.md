@@ -1,12 +1,23 @@
-# I had to integrate few React components in a Django View using jQuery: A Journey
+---
+title: "I had to integrate few React components in a Django View using jQuery: A Journey"
+seoTitle: "Integrating React Components into an Existing UI"
+seoDescription: "How did I load my React Components into existing jQuery based UI rendered by Django on Server at Interview Kickstart"
+datePublished: Mon Jan 09 2023 12:25:30 GMT+0000 (Coordinated Universal Time)
+cuid: clcos1onq000008ml4tuq2jir
+slug: rendering-react-component-in-django-jquery-ui
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1673245430375/a73ea775-7afe-4a92-a1c9-fb01f1ccc488.jpeg
+ogImage: https://cdn.hashnode.com/res/hashnode/image/upload/v1673267073681/6282d170-154e-406d-b1bf-3d8a8c874ffa.png
+tags: technology, django, reactjs, software-engineering, frontend-development
+
+---
 
 A small journey into my Tech World filled with bizarre experiences. One such instance that comes to mind is when I had to make some enhancements to an existing UI that was written earlier. The older Tech Stack was Django-based SSR (using View Templating) with jQuery in the browser. However, the enhancement planned was based on React, as the library, we will be composing on top of was built in React and we were already in the middle of a Tech Stack migration for the front-end. On the other hand, the whole UI system of the existing one was quite heavy and would require significant *person-hour* to completely migrate to React. So we made a decision that we will build all enhancements in React while keeping the older UI intact and just extensible.
 
-*TLDR;* Experienced React developers can skip directly to [Let's Get Started](https://theprodev.hashnode.dev/rendering-react-component-in-django-jquery-ui?showSharer=true#heading-lets-get-started) chapter.
+*TLDR;* Experienced React developers can skip directly to the [Let's Get Started](https://theprodev.hashnode.dev/rendering-react-component-in-django-jquery-ui?showSharer=true#heading-lets-get-started) chapter.
 
-## How React works in Browser
+## How React Works in Browser
 
-Before we get started with the nitty-gritty implementation details of the topic. Let us take a moment and understand how React libraries work under the hood to build the UI we declared in our codebase.
+Before we get started with the nitty-gritty implementation details of the topic. Let us take a moment and understand how the React libraries work under the hood to build the UI we declared in our codebase.
 
 In our codebase, a React component might look like this:
 
@@ -143,7 +154,7 @@ def parse_asset_manifest(strOrBytes: StrOrBytes) -> AssetManifest:
     return json.loads(strOrBytes, cls=AssetManifestDecoder)
 ```
 
-Here we have developed our custom *JSON* Decoder that serializes a *JSON* string into an `AssetManifest` object. The function `parse_asset_manifest` can be tested in isolation for validation, however, we would be using `load_asset_manifest` function more often. Provided we can configure the destination directory for Webpack to emit the manifest file, the actual file path can be given through environment variables.
+Here we have developed our custom *JSON* Decoder that serializes a *JSON* string into an `AssetManifest` object. The function `parse_asset_manifest` can be tested in isolation for validation, however, we would be using the `load_asset_manifest` function more often. Provided we can configure the destination directory for Webpack to emit the manifest file, the actual file path can be given through environment variables.
 
 Now let's create a mixin that composes this middleware and simplifies the integration process.
 
@@ -195,6 +206,6 @@ $(document).ready(function() {
 
 ## Conclusion
 
-So it turns out, despite sounding unorthodox, it is possible to integrate a React UI system into an existing one and could be a potential choice that save some $$ for the business.
+So it turns out, despite sounding unorthodox, it is possible to integrate a React UI system into an existing one and could be a potential choice that saves some $$ for the business.
 
 ![Abhijeet Dancin Abhijeet Cid GIF - Abhijeet Dancin Abhijeet Cid Smile -  Discover & Share GIFs](https://media.tenor.com/-CSZYL3DkmYAAAAd/abhijeet-dancin-abhijeet-cid.gif align="left")
